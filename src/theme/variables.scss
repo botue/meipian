@@ -74,4 +74,46 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+  --scroll-bar-background-active: #4d90f7;
 }
+
+img {
+  vertical-align: middle;
+}
+
+ion-infinite-scroll-content {
+  min-height: 1.2rem;
+  font-size: 0.36rem;
+}
+
+.infinite-loading {
+  margin-bottom: 0;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.infinite-loading-spinner ion-spinner {
+  width: 0.6rem;
+  height: 0.6rem;
+  color: #5a5a5a;
+}
+
+.infinite-loading-text {
+  margin: 0 0 0.08rem 0;
+  --ion-color-step-600: #5a5a5a;
+}
+
+.refresher-pulling ion-icon {
+  color: #5a5a5a;
+  font-size: 0.8rem;
+}
+
+.refresher-refreshing ion-spinner {
+  color: #5a5a5a;
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
+

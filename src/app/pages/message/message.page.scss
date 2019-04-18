@@ -1,0 +1,109 @@
+
+ion-header {
+
+  ion-button {
+    font-size: 0.4rem;
+    color: #333;
+    font-weight: normal;
+  }
+
+  ion-title {
+    font-size: 0.44rem;
+    font-weight: normal;
+    color: #333;
+  }
+
+  ion-icon {
+    font-size: 0.6rem;
+  }
+}
+
+ion-content {
+  --background: #f1f2f5;
+}
+
+// 导航
+ion-grid {
+  padding: 0.68rem 0;
+  background-color: #FFF;
+
+  ion-col {
+    padding: 0;
+  }
+
+  ion-img {
+    width: 1.08rem;
+    height: 1.08rem;
+    margin: 0 auto;
+  }
+
+  ion-label {
+    display: block;
+    text-align: center;
+    line-height: 1;
+    margin-top: 0.28rem;
+    font-size: 0.32rem;
+    color: #333;
+  }
+}
+
+ion-list {
+  padding-left: 0.4rem;
+  margin-top: 0.28rem;
+  margin-bottom: 0;
+}
+
+ion-item {
+  --padding-top: 0.48rem;
+  --padding-start: 0px;
+  --inner-padding-end: 0;
+  --border-color: #f1f2f5;
+  position: relative;
+
+  ion-avatar {
+    width: 1.16rem;
+    height: 1.16rem;
+    margin: 0 0.36rem 0 0;
+  }
+
+  ion-label {
+    line-height: 1;
+    margin: 0;
+
+    h4 {
+      line-height: 1;
+      margin-bottom: 0.24rem;
+      font-weight: 500;
+      font-size: 0.4rem;
+      color: #020202;
+    }
+
+    p {
+      line-height: 1;
+      font-size: 0.32rem;
+      color: #9b9b9b;
+      margin-bottom: 0.48rem;
+      margin-right: 2.2rem;
+    }
+
+    .user {
+      color: #5b6a91;
+    }
+  }
+
+  .time {
+    position: absolute;
+    right: 0.4rem;
+    top: 0.44rem;
+    
+    line-height: 1;
+    font-size: 0.32rem;
+    color: #9b9b9b;
+  }
+}
+
+
+
+
+
+

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <style type="text/css">
+  	.st0 {
+      fill: none;
+      stroke: #4d90f7;
+      stroke-width: 16;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10;
+    }
+  </style>
+  <line class="st0" x1="360" y1="200" x2="334.19" y2="240"/>
+  <line class="st0" x1="360" y1="200" x2="334.19" y2="240"/>
+  <path class="st0" d="M320.86,270.7C296.55,312.16,251.53,340,200,340c-77.32,0-140-62.68-140-140c0-13.9,2.03-27.33,5.8-40"/>
+  <path class="st0" d="M80,127.85C104.49,87.19,149.07,60,200,60c77.32,0,140,62.68,140,140c0,13.9-2.03,27.33-5.8,40"/>
+  <line class="st0" x1="40" y1="200" x2="65.81" y2="160"/>
+</svg>

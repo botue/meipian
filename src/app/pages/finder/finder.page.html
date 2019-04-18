@@ -1,0 +1,388 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon slot="icon-only" name="mp-search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="mp-user"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      <ion-segment (ionSelect)="segmentSelected($event)" value="{{segmentValue}}">
+        <ion-segment-button value="focus">
+          <ion-label>关注</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="recommend">
+          <ion-label>推荐</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="video">
+          <ion-label>视频</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+      <!-- 提示器 -->
+      <div class="indicator" [ngStyle]="indicatorStyles"></div>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content scroll-y="false">
+  <ion-slides [options]="slideOpts" (ionSlideDidChange)="slideDidChange()">
+
+    <!-- 关注 -->
+    <ion-slide class="focus">
+      <ion-content>
+        <!-- 下拉刷新 -->
+        <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+          <ion-refresher-content></ion-refresher-content>
+        </ion-refresher>
+        
+        <ion-card text-start>
+          <ion-card-header>
+            <ion-chip>
+              <ion-avatar>
+                <img src="/assets/images/avatar_1.jpg">
+              </ion-avatar>
+              <ion-label>八月花开 静候佳音</ion-label>
+            </ion-chip>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-card-title>我们成长的孩子和辛勤付出的老师！</ion-card-title>
+            <ion-img src="/assets/images/cover_1.jpg"></ion-img>
+            <ion-chip>
+              <ion-label>29阅读</ion-label>
+              <ion-label>0评论</ion-label>
+              <ion-label>0点赞</ion-label>
+            </ion-chip>
+          </ion-card-content>
+        </ion-card>
+        <ion-card text-start>
+          <ion-card-header>
+            <ion-chip>
+              <ion-avatar>
+                <img src="/assets/images/avatar_1.jpg">
+              </ion-avatar>
+              <ion-label>八月花开 静候佳音</ion-label>
+            </ion-chip>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-card-title>孩子们满满的幸福和收获！</ion-card-title>
+            <ion-img src="/assets/images/cover_2.jpg"></ion-img>
+            <ion-chip>
+              <ion-label>29阅读</ion-label>
+              <ion-label>0评论</ion-label>
+              <ion-label>0点赞</ion-label>
+            </ion-chip>
+          </ion-card-content>
+        </ion-card>
+        <ion-card text-start>
+          <ion-card-header>
+            <ion-chip>
+              <ion-avatar>
+                <img src="/assets/images/avatar_2.jpg">
+              </ion-avatar>
+              <ion-label>八月花开 静候佳音</ion-label>
+            </ion-chip>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-card-title>我们成长的孩子和辛勤付出的老师！</ion-card-title>
+            <ion-img src="/assets/images/cover_3.jpg"></ion-img>
+            <ion-chip>
+              <ion-label>29阅读</ion-label>
+              <ion-label>0评论</ion-label>
+              <ion-label>0点赞</ion-label>
+            </ion-chip>
+          </ion-card-content>
+        </ion-card>
+        <ion-card text-start>
+          <ion-card-header>
+            <ion-chip>
+              <ion-avatar>
+                <img src="/assets/images/avatar_1.jpg">
+              </ion-avatar>
+              <ion-label>八月花开 静候佳音</ion-label>
+            </ion-chip>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-card-title>孩子们满满的幸福和收获！</ion-card-title>
+            <ion-img src="/assets/images/cover_4.jpg"></ion-img>
+            <ion-chip>
+              <ion-label>29阅读</ion-label>
+              <ion-label>0评论</ion-label>
+              <ion-label>0点赞</ion-label>
+            </ion-chip>
+          </ion-card-content>
+        </ion-card>
+        
+        <!-- 感兴趣的人 -->
+        <ion-list class="random">
+          <ion-list-header>
+            <ion-label>你可能感兴趣的人</ion-label>
+          </ion-list-header>
+          <ion-item>
+            <ion-avatar slot="start">
+              <img src="/assets/images/avatar_2.jpg">
+            </ion-avatar>
+            <ion-label>
+              <h3>金金（苗艺堂）</h3>
+              <p>你们的共同好友：璞邸酒店</p>
+              <p>7篇文章・460粉丝</p>
+            </ion-label>
+            <ion-button slot="end">关注</ion-button>
+          </ion-item>
+          <ion-item lines="none">
+            <ion-avatar slot="start">
+              <img src="/assets/images/avatar_2.jpg">
+            </ion-avatar>
+            <ion-label>
+              <h3>金金（苗艺堂）</h3>
+              <p>你们的共同好友：璞邸酒店</p>
+              <p>7篇文章・460粉丝</p>
+            </ion-label>
+            <ion-button slot="end">关注</ion-button>
+          </ion-item>
+
+          <!-- 刷新 -->
+          <ion-chip text-center>
+            <ion-icon name="mp-refresh"></ion-icon>
+            <ion-label>换一批</ion-label>
+          </ion-chip>
+        </ion-list>
+
+        <ion-card text-start>
+          <ion-card-header>
+            <ion-chip>
+              <ion-avatar>
+                <img src="/assets/images/avatar_2.jpg">
+              </ion-avatar>
+              <ion-label>八月花开 静候佳音</ion-label>
+            </ion-chip>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-card-title>孩子们满满的幸福和收获！</ion-card-title>
+            <ion-img src="/assets/images/cover_5.jpg"></ion-img>
+            <ion-chip>
+              <ion-label>29阅读</ion-label>
+              <ion-label>0评论</ion-label>
+              <ion-label>0点赞</ion-label>
+            </ion-chip>
+          </ion-card-content>
+        </ion-card>
+        <ion-card text-start>
+          <ion-card-header>
+            <ion-chip>
+              <ion-avatar>
+                <img src="/assets/images/avatar_2.jpg">
+              </ion-avatar>
+              <ion-label>八月花开 静候佳音</ion-label>
+            </ion-chip>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-card-title>孩子们满满的幸福和收获！</ion-card-title>
+            <ion-img src="/assets/images/cover_6.jpg"></ion-img>
+            <ion-chip>
+              <ion-label>29阅读</ion-label>
+              <ion-label>0评论</ion-label>
+              <ion-label>0点赞</ion-label>
+            </ion-chip>
+          </ion-card-content>
+        </ion-card>
+        
+        <!-- 上拉加载 -->
+        <ion-infinite-scroll>
+          <ion-infinite-scroll-content
+            loadingSpinner="lines-small"
+            loadingText="正在加载...">
+          </ion-infinite-scroll-content>
+        </ion-infinite-scroll>
+      </ion-content>
+    </ion-slide>
+    
+    <!-- 推荐 -->
+    <ion-slide class="recommend">
+      <ion-grid fixed>
+        <ion-row>
+          <ion-col>
+            <ion-avatar>
+              <img src="/assets/images/nav_1.png">
+            </ion-avatar>
+            <ion-label>专题</ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-avatar>
+              <img src="/assets/images/nav_2.png">
+            </ion-avatar>
+            <ion-label>寻春征文</ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-avatar>
+              <img src="/assets/images/nav_3.png">
+            </ion-avatar>
+            <ion-label>积分签到</ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-avatar>
+              <img src="/assets/images/nav_4.png">
+            </ion-avatar>
+            <ion-label>打印文章</ion-label>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-content [scrollEvents]="true" (ionScroll)="doScroll($event)">
+        <!-- 下拉刷新 -->
+        <ion-refresher (ionRefresh)="doRefresh($event)">
+          <ion-refresher-content></ion-refresher-content>
+        </ion-refresher>
+
+        <ion-card text-start>
+          <ion-card-header>
+            <ion-chip>
+              <ion-avatar>
+                <img src="/assets/images/avatar_1.jpg">
+              </ion-avatar>
+              <ion-label>八月花开 静候佳音</ion-label>
+            </ion-chip>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-card-title>我们成长的孩子和辛勤付出的老师！</ion-card-title>
+            <ion-img src="/assets/images/cover_1.jpg"></ion-img>
+            <ion-chip>
+              <ion-label>29阅读</ion-label>
+              <ion-label>0评论</ion-label>
+              <ion-label>0点赞</ion-label>
+            </ion-chip>
+          </ion-card-content>
+        </ion-card>
+        <ion-card text-start>
+          <ion-card-header>
+            <ion-chip>
+              <ion-avatar>
+                <img src="/assets/images/avatar_1.jpg">
+              </ion-avatar>
+              <ion-label>八月花开 静候佳音</ion-label>
+            </ion-chip>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-card-title>孩子们满满的幸福和收获！</ion-card-title>
+            <ion-img src="/assets/images/cover_2.jpg"></ion-img>
+            <ion-chip>
+              <ion-label>29阅读</ion-label>
+              <ion-label>0评论</ion-label>
+              <ion-label>0点赞</ion-label>
+            </ion-chip>
+          </ion-card-content>
+        </ion-card>
+        <ion-card text-start>
+          <ion-card-header>
+            <ion-chip>
+              <ion-avatar>
+                <img src="/assets/images/avatar_2.jpg">
+              </ion-avatar>
+              <ion-label>八月花开 静候佳音</ion-label>
+            </ion-chip>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-card-title>我们成长的孩子和辛勤付出的老师！</ion-card-title>
+            <ion-img src="/assets/images/cover_3.jpg"></ion-img>
+            <ion-chip>
+              <ion-label>29阅读</ion-label>
+              <ion-label>0评论</ion-label>
+              <ion-label>0点赞</ion-label>
+            </ion-chip>
+          </ion-card-content>
+        </ion-card>
+        <ion-card text-start>
+          <ion-card-header>
+            <ion-chip>
+              <ion-avatar>
+                <img src="/assets/images/avatar_1.jpg">
+              </ion-avatar>
+              <ion-label>八月花开 静候佳音</ion-label>
+            </ion-chip>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-card-title>孩子们满满的幸福和收获！</ion-card-title>
+            <ion-img src="/assets/images/cover_4.jpg"></ion-img>
+            <ion-chip>
+              <ion-label>29阅读</ion-label>
+              <ion-label>0评论</ion-label>
+              <ion-label>0点赞</ion-label>
+            </ion-chip>
+          </ion-card-content>
+        </ion-card>
+        <ion-card text-start>
+          <ion-card-header>
+            <ion-chip>
+              <ion-avatar>
+                <img src="/assets/images/avatar_2.jpg">
+              </ion-avatar>
+              <ion-label>八月花开 静候佳音</ion-label>
+            </ion-chip>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-card-title>孩子们满满的幸福和收获！</ion-card-title>
+            <ion-img src="/assets/images/cover_5.jpg"></ion-img>
+            <ion-chip>
+              <ion-label>29阅读</ion-label>
+              <ion-label>0评论</ion-label>
+              <ion-label>0点赞</ion-label>
+            </ion-chip>
+          </ion-card-content>
+        </ion-card>
+        <ion-card text-start>
+          <ion-card-header>
+            <ion-chip>
+              <ion-avatar>
+                <img src="/assets/images/avatar_2.jpg">
+              </ion-avatar>
+              <ion-label>八月花开 静候佳音</ion-label>
+            </ion-chip>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-card-title>孩子们满满的幸福和收获！</ion-card-title>
+            <ion-img src="/assets/images/cover_6.jpg"></ion-img>
+            <ion-chip>
+              <ion-label>29阅读</ion-label>
+              <ion-label>0评论</ion-label>
+              <ion-label>0点赞</ion-label>
+            </ion-chip>
+          </ion-card-content>
+        </ion-card>
+
+        <!-- 上拉加载 -->
+        <ion-infinite-scroll>
+          <ion-infinite-scroll-content
+            loadingSpinner="lines-small"
+            loadingText="正在加载...">
+          </ion-infinite-scroll-content>
+        </ion-infinite-scroll>
+      </ion-content>
+    </ion-slide>
+    <!-- 视频 -->
+    <ion-slide class="video">
+      <ion-content>
+        <!-- 下拉刷新 -->
+        <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+          <ion-refresher-content></ion-refresher-content>
+        </ion-refresher>
+
+        <ion-list [style.height.px]="maxCol">
+          <ion-item lines="none" [ngStyle]="video.styles" *ngFor="let video of videoItems">
+            <ion-img [src]="video.cover"></ion-img>
+          </ion-item>
+        </ion-list>
+
+        <!-- 上拉加载 -->
+        <ion-infinite-scroll>
+          <ion-infinite-scroll-content
+            loadingSpinner="lines-small"
+            loadingText="正在加载...">
+          </ion-infinite-scroll-content>
+        </ion-infinite-scroll>
+      </ion-content>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

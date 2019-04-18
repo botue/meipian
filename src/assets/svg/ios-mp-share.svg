@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <style type="text/css">
+  	.st0 {
+      fill: none;
+      stroke: #333333;
+      stroke-width: 16;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10;
+    }
+  </style>
+  <path class="st0" d="M200,240c0-88.37,71.63-140,160-140"/>
+  <path class="st0" d="M320,200v80c0,22.09-17.91,40-40,40H120c-22.09,0-40-17.91-40-40V120c0-22.09,17.91-40,40-40h120"/>
+  <polyline class="st0" points="320,60 360,100 320,140 "/>
+</svg>

@@ -1,0 +1,218 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon slot="icon-only" name="mp-search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="mp-edit"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>圈子</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<div class="popular">
+  <ion-content scroll-x="true" scroll-y="false">
+    <ion-list>
+      <ion-item text-center lines="none">
+        <ion-img src="/assets/images/avatar_10.jpg"></ion-img>
+        <ion-label position="stacked">更多圈子</ion-label>
+      </ion-item>
+      <ion-item text-center lines="none">
+        <ion-img src="/assets/images/avatar_3.jpg"></ion-img>
+        <ion-label position="stacked">生活就是风景</ion-label>
+      </ion-item>
+      <ion-item text-center lines="none">
+        <ion-img src="/assets/images/avatar_4.jpg"></ion-img>
+        <ion-label position="stacked">中国摄影精品展示圈</ion-label>
+      </ion-item>
+      <ion-item text-center lines="none">
+        <ion-img src="/assets/images/avatar_5.jpg"></ion-img>
+        <ion-label position="stacked">爱花的朋友</ion-label>
+      </ion-item>
+      <ion-item text-center lines="none">
+        <ion-img src="/assets/images/avatar_6.jpg"></ion-img>
+        <ion-label position="stacked">美篇摄影群</ion-label>
+      </ion-item>
+      <ion-item text-center lines="none">
+        <ion-img src="/assets/images/avatar_7.jpg"></ion-img>
+        <ion-label position="stacked">大杂烩</ion-label>
+      </ion-item>
+      <ion-item text-center lines="none">
+        <ion-img src="/assets/images/avatar_8.jpg"></ion-img>
+        <ion-label position="stacked">用心去发现生活中的美和善</ion-label>
+      </ion-item>
+      <ion-item text-center lines="none">
+        <ion-img src="/assets/images/avatar_9.jpg"></ion-img>
+        <ion-label position="stacked">心静听花落</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</div>
+
+<div class="posts">
+  <ion-content>
+    <!-- 下拉刷新 -->
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+
+    <ion-list>
+      <ion-item lines="none">
+        <div class="info">
+          <ion-chip class="author">
+            <ion-img src="/assets/images/avatar_1.jpg"></ion-img>
+            <ion-label class="nickname">倩衣小雪</ion-label>
+            <ion-label class="date">03-18</ion-label>
+          </ion-chip>
+          <p class="brief">
+            蓝天做背景的花儿有多美！蓝天做背景的花儿有多美！蓝天做背景的花儿有多美！蓝天做背景的花儿有多美！蓝天做背景的花儿有多美！蓝天做背景的花儿有多美！蓝天做背景的花儿有多美！
+          </p>
+          <ion-chip class="extra">
+            <ion-label>81 阅读</ion-label>
+            <ion-label>17 评论</ion-label>
+            <ion-label>16 点赞</ion-label>
+          </ion-chip>
+        </div>
+        <ion-img src="/assets/images/posts_1.jpg"></ion-img>
+      </ion-item>
+      <ion-item lines="none">
+        <div class="info">
+          <ion-chip class="author">
+            <ion-img src="/assets/images/avatar_1.jpg"></ion-img>
+            <ion-label class="nickname">倩衣小雪</ion-label>
+            <ion-label class="date">03-18</ion-label>
+          </ion-chip>
+          <p class="brief">
+            蓝天做背景的花儿有多美！蓝天做背景的花儿有多美！蓝天做背景的花儿有多美！蓝天做背景的花儿有多美！蓝天做背景的花儿有多美！蓝天做背景的花儿有多美！蓝天做背景的花儿有多美！
+          </p>
+          <ion-chip class="extra">
+            <ion-label>81 阅读</ion-label>
+            <ion-label>17 评论</ion-label>
+            <ion-label>16 点赞</ion-label>
+          </ion-chip>
+        </div>
+        <ion-img src="/assets/images/posts_2.jpg"></ion-img>
+      </ion-item>
+      <ion-item lines="none">
+        <div class="info">
+          <ion-chip class="author">
+            <ion-img src="/assets/images/avatar_1.jpg"></ion-img>
+            <ion-label class="nickname">倩衣小雪</ion-label>
+            <ion-label class="date">03-18</ion-label>
+          </ion-chip>
+          <p class="brief">
+            蓝天做背景的花儿有多美！蓝天做背景的花儿有多美！蓝天做背景的花儿有多美！蓝天做背景的花儿有多美！蓝天做背景的花儿有多美！蓝天做背景的花儿有多美！蓝天做背景的花儿有多美！
+          </p>
+          <ion-chip class="extra">
+            <ion-label>81 阅读</ion-label>
+            <ion-label>17 评论</ion-label>
+            <ion-label>16 点赞</ion-label>
+          </ion-chip>
+        </div>
+        <ion-img src="/assets/images/posts_3.jpg"></ion-img>
+      </ion-item>
+      <ion-item lines="none">
+        <div class="info">
+          <ion-chip class="author">
+            <ion-img src="/assets/images/avatar_1.jpg"></ion-img>
+            <ion-label class="nickname">倩衣小雪</ion-label>
+            <ion-label class="date">03-18</ion-label>
+          </ion-chip>
+          <p class="brief">
+            蓝天做背景的花儿有多美！蓝天做背景的花儿有多美！蓝天做背景的花儿有多美！蓝天做背景的花儿有多美！蓝天做背景的花儿有多美！蓝天做背景的花儿有多美！蓝天做背景的花儿有多美！
+          </p>
+          <ion-chip class="extra">
+            <ion-label>81 阅读</ion-label>
+            <ion-label>17 评论</ion-label>
+            <ion-label>16 点赞</ion-label>
+          </ion-chip>
+        </div>
+        <ion-img src="/assets/images/posts_4.jpg"></ion-img>
+      </ion-item>
+      <ion-item lines="none">
+        <div class="info">
+          <ion-chip class="author">
+            <ion-img src="/assets/images/avatar_1.jpg"></ion-img>
+            <ion-label class="nickname">倩衣小雪</ion-label>
+            <ion-label class="date">03-18</ion-label>
+          </ion-chip>
+          <p class="brief">
+            蓝天做背景的花儿有多美！蓝天做背景的花儿有多美！蓝天做背景的花儿有多美！蓝天做背景的花儿有多美！蓝天做背景的花儿有多美！蓝天做背景的花儿有多美！蓝天做背景的花儿有多美！
+          </p>
+          <ion-chip class="extra">
+            <ion-label>81 阅读</ion-label>
+            <ion-label>17 评论</ion-label>
+            <ion-label>16 点赞</ion-label>
+          </ion-chip>
+        </div>
+        <ion-img src="/assets/images/posts_5.jpg"></ion-img>
+      </ion-item>
+      <ion-item lines="none">
+        <div class="info">
+          <ion-chip class="author">
+            <ion-img src="/assets/images/avatar_1.jpg"></ion-img>
+            <ion-label class="nickname">倩衣小雪</ion-label>
+            <ion-label class="date">03-18</ion-label>
+          </ion-chip>
+          <p class="brief">
+            蓝天做背景的花儿有多美！蓝天做背景的花儿有多美！蓝天做背景的花儿有多美！蓝天做背景的花儿有多美！蓝天做背景的花儿有多美！蓝天做背景的花儿有多美！蓝天做背景的花儿有多美！
+          </p>
+          <ion-chip class="extra">
+            <ion-label>81 阅读</ion-label>
+            <ion-label>17 评论</ion-label>
+            <ion-label>16 点赞</ion-label>
+          </ion-chip>
+        </div>
+        <ion-img src="/assets/images/posts_6.jpg"></ion-img>
+      </ion-item>
+      <ion-item lines="none">
+        <div class="info">
+          <ion-chip class="author">
+            <ion-img src="/assets/images/avatar_1.jpg"></ion-img>
+            <ion-label class="nickname">倩衣小雪</ion-label>
+            <ion-label class="date">03-18</ion-label>
+          </ion-chip>
+          <p class="brief">
+            蓝天做背景的花儿有多美！蓝天做背景的花儿有多美！蓝天做背景的花儿有多美！蓝天做背景的花儿有多美！蓝天做背景的花儿有多美！蓝天做背景的花儿有多美！蓝天做背景的花儿有多美！
+          </p>
+          <ion-chip class="extra">
+            <ion-label>81 阅读</ion-label>
+            <ion-label>17 评论</ion-label>
+            <ion-label>16 点赞</ion-label>
+          </ion-chip>
+        </div>
+        <ion-img src="/assets/images/posts_7.jpg"></ion-img>
+      </ion-item>
+      <ion-item lines="none">
+        <div class="info">
+          <ion-chip class="author">
+            <ion-img src="/assets/images/avatar_1.jpg"></ion-img>
+            <ion-label class="nickname">倩衣小雪</ion-label>
+            <ion-label class="date">03-18</ion-label>
+          </ion-chip>
+          <p class="brief">
+            蓝天做背景的花儿有多美！蓝天做背景的花儿有多美！蓝天做背景的花儿有多美！蓝天做背景的花儿有多美！蓝天做背景的花儿有多美！蓝天做背景的花儿有多美！蓝天做背景的花儿有多美！
+          </p>
+          <ion-chip class="extra">
+            <ion-label>81 阅读</ion-label>
+            <ion-label>17 评论</ion-label>
+            <ion-label>16 点赞</ion-label>
+          </ion-chip>
+        </div>
+        <ion-img src="/assets/images/posts_8.jpg"></ion-img>
+      </ion-item>
+    </ion-list>
+
+    <!-- 上拉加载 -->
+    <ion-infinite-scroll>
+      <ion-infinite-scroll-content
+        loadingSpinner="lines-small"
+        loadingText="正在加载...">
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+  </ion-content>
+</div>

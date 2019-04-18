@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <style type="text/css">
+  	.st0 {
+      fill: none;
+      stroke: #333333;
+      stroke-width: 16;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10;
+    }
+  </style>
+  <path class="st0" d="M360,160v180c0,11.05-8.95,20-20,20H60c-11.05,0-20-8.95-20-20V60c0-11.05,8.95-20,20-20h180"/>
+  <polygon class="st0" points="120,280 160,280 360,80 320,40 120,240 "/>
+</svg>

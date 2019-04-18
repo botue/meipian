@@ -1,5 +1,7 @@
 {
   "name": "meipian",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

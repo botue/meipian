@@ -1,0 +1,68 @@
+
+ion-app {
+  background-color: #f1f2f5;
+}
+
+ion-tab-bar {
+  contain: none;
+  --color: #666;
+  --color-selected: #4d90f7;
+
+  ion-label {
+    font-size: 0.28rem;
+  }
+}
+
+.icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-size: cover;
+}
+
+.finder {
+  background-image: url(/assets/icons/finder.png);
+}
+
+.group {
+  background-image: url(/assets/icons/group.png);
+}
+
+.message {
+  background-image: url(/assets/icons/message.png);
+}
+
+.home {
+  background-image: url(/assets/icons/home.png);
+}
+
+.tab-selected .finder {
+  background-image: url(/assets/icons/finder-active.png);
+}
+
+.tab-selected .group {
+  background-image: url(/assets/icons/group-active.png);
+}
+
+.tab-selected .message {
+  background-image: url(/assets/icons/message-active.png);
+}
+
+.tab-selected .home {
+  background-image: url(/assets/icons/home-active.png);
+}
+
+.create {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  position: absolute;
+  top: -12px;
+
+  background-image: url(/assets/icons/create-active.png);
+}
+
+.create + ion-label {
+  margin-top: 26px;
+}
+

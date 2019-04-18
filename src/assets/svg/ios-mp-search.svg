@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <style type="text/css">
+  	.st0 {
+      fill: none;
+      stroke: #333333;
+      stroke-width: 16;
+      stroke-linecap: round;
+      stroke-miterlimit: 10;
+    }
+  </style>
+  <circle class="st0" cx="180" cy="180" r="140"/>
+  <line class="st0" x1="360" y1="360" x2="278.99" y2="278.99"/>
+</svg>

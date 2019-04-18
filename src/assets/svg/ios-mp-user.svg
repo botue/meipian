@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <style type="text/css">
+  	.st0 {
+      fill: none;
+      stroke: #333333;
+      stroke-width: 16;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10;
+    }
+  </style>
+  <line class="st0" x1="300" y1="240" x2="300" y2="360"/>
+  <line class="st0" x1="360" y1="300" x2="240" y2="300"/>
+  <circle class="st0" cx="200" cy="120" r="80"/>
+  <path class="st0" d="M240,240c-200,0-200,40-200,60v40c0,11.05,8.95,20,20,20h180"/>
+</svg>
